@@ -17,3 +17,15 @@ Pelaajan muuttujat haetaan metodin kautta
 Dokumentaatiota lisätty
 Else if sotku nätimpi simpelöimällä
 Do while muutettu whileksi
+
+3) Ota erityisesti huomioon testattavuus. Paranna koodia edelleen (siirrä mm. koodia metodeiksi), jotta voit laatia kattavat ja asialliset JUnit 5 -testit. Laadi sitten JUnit-testit.
+
+Testit lisätty
+
+4) Kirjoita asialliset Javadoc-kommentit, ja tuota Javadoc-sivusto. Vie sivusto versiohallintaan.
+
+Javadoc lisätty
+
+5) Tee lopuksi vielä testien kattavuusanalyysi (vain ohjelman koodille, älä sisällytä mukaan testien koodia). Mieti vielä lopuksi, oletko testannut kaikki oleelliset asiat. Virittele tarvittaessa lisää
+
+Tehty

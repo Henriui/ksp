@@ -2,7 +2,9 @@ package org.ksp;
 
 public class Main {
     public static void main(String args[]) {
-        Peli peli = new Peli();
+        Pelaaja pelaaja1 = new Pelaaja();
+        Pelaaja pelaaja2 = new Pelaaja();
+        Peli peli = new Peli( pelaaja1, pelaaja2);
         peli.pelaa();
     }
 }

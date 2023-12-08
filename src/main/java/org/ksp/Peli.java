@@ -25,12 +25,12 @@ public class Peli {
      * Luo kaksi pelaajaa, ja alustaa pelin tilan.
      * @see Pelaaja
      */
-    public Peli() {
-    p1 = new Pelaaja();
-    p2 = new Pelaaja();
-    peliLoppui = false;
-    pelatutPelit = 0;
-    tasapelit = 0;
+    public Peli(Pelaaja p1, Pelaaja p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+        peliLoppui = false;
+        pelatutPelit = 0;
+        tasapelit = 0;
     }
 
     /**
@@ -70,19 +70,24 @@ public class Peli {
 
             pelatutPelit++;
 
-            if ((p1.getVoitot() >= 3) || (p2.getVoitot() >= 3)) {
-                peliLoppui = true;
-                System.out.println("KOLME VOITTOA - PELI PÄÄTTYY");
-                if (p1.getVoitot() > p2.getVoitot()) {
-                    System.out.println("Pelaaja 1 voitti!");
-                } else {
-                    System.out.println("Pelaaja 2 voitti!");
-                }
-            }
+            checkWin();
         }
     }
 
-    private void valitseVoittaja(KSP p1Valinta, KSP p2Valinta) {
+    public boolean checkWin() {
+        if ((p1.getVoitot() >= 3) || (p2.getVoitot() >= 3)) {
+            System.out.println("KOLME VOITTOA - PELI PÄÄTTYY");
+            if (p1.getVoitot() > p2.getVoitot()) {
+                System.out.println("Pelaaja 1 voitti!");
+            } else {
+                System.out.println("Pelaaja 2 voitti!");
+            }
+        }
+        peliLoppui = (p1.getVoitot() >= 3) || (p2.getVoitot() >= 3);
+        return peliLoppui;
+    }
+
+    public void valitseVoittaja(KSP p1Valinta, KSP p2Valinta) {
         // Tasapeli
 
         if (p1Valinta == p2Valinta) {
@@ -101,5 +106,25 @@ public class Peli {
             System.out.println("Pelaaja 2 voittaa!");
             p2.setVoitot();
         }
+    }
+
+    public int getPelatutPelit() {
+        return pelatutPelit;
+    }
+
+    public boolean isPeliLoppui() {
+        return peliLoppui;
+    }
+
+    public int getTasapelit() {
+        return tasapelit;
+    }
+
+    public Pelaaja getP1() {
+        return p1;
+    }
+
+    public Pelaaja getP2() {
+        return p2;
     }
 }
