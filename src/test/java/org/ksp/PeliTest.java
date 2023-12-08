@@ -7,7 +7,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.Mockito;
 
 import static org.mockito.Mockito.*;
-
+/**
+ * Peli luokka testi
+ * @Author Henri Uimonen
+ */
 public class PeliTest {
 
     Peli peli;

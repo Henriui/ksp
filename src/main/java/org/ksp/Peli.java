@@ -74,6 +74,13 @@ public class Peli {
         }
     }
 
+    /**
+     * Peli checkWin() metodi tarkistaa, onko jompikumpi pelaajista saanut kolme voittoa.
+     * Jos jompikumpi pelaajista on saanut kolme voittoa, peli loppuu.
+     * metodi printtaa pelin tulokset.
+     *
+     * @return palauttaa true, jos jompikumpi pelaajista on saanut kolme voittoa.
+     */
     public boolean checkWin() {
         if ((p1.getVoitot() >= 3) || (p2.getVoitot() >= 3)) {
             System.out.println("KOLME VOITTOA - PELI PÄÄTTYY");
@@ -87,6 +94,13 @@ public class Peli {
         return peliLoppui;
     }
 
+    /**
+     * Peli valitseVoittaja() metodi vertaa pelaajien valintoja ja printtaa voittajan.
+     *
+     * @param p1Valinta pelaaja 1:n valinta
+     * @param p2Valinta pelaaja 2:n valinta
+     * @return ei palauta mitään.
+     */
     public void valitseVoittaja(KSP p1Valinta, KSP p2Valinta) {
         // Tasapeli
 
